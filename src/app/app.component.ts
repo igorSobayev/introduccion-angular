@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'esto lo he modificado yo';
+  show:boolean = true;
+  cursos:string[] = ['HTML', 'ANGULAR', 'PHP'];
+  animales:Array<any> = [
+    {tipo: 'Perro', nombre: 'Shadow', edad: 2},
+    {tipo: 'Gato', nombre: 'Pushy', edad: 9},
+    {tipo: 'Araña', nombre: 'Pelusa', edad: 1}
+  ]
 }

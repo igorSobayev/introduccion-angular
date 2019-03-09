@@ -1,1 +1,77 @@
+<!-- Empezando a trabajar con angular
+    Probamos la directiva ngIf para ver el funcionamiento
+    Para mostrar variables utilizamos {{ nombre_variable }}
+    Para hacer un if utilizamos *ngIf="condicion; else [llamamos a template]"
+   <h1 class="container bg-dark text-white text-center my-4 py-4">ngif show = {{ show }}</h1>
+<div class="container">
+  <button class="btn btn-warning" (click)="show=!show">Pulsame</button>
 
+  <p class="text-info" *ngIf="show; else showDos">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Illo, odio
+    similique! Consequuntur rem blanditiis similique voluptates, corporis
+    maiores doloremque cumque officiis illo quod libero illum animi tenetur
+    atque vel. Dignissimos.</p>
+
+  <ng-template #showDos>
+      <p class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Illo, odio
+          similique! Consequuntur rem blanditiis similique voluptates, corporis
+          maiores doloremque cumque officiis illo quod libero illum animi tenetur
+          atque vel. Dignissimos.</p>
+  </ng-template>
+</div>
+-->
+
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
+<!--Empezando a trabajar con las clases
+    Para establecer una clase utilizamos ngClass
+    Además añadimos eventos como el click, para ello utilizamos (evento)="acción"
+   <h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
+<div class="container">
+  <button class="btn btn-danger mr-4" (click)="activo='primero'">Te muestro magia</button>
+  <button class="btn btn-dark" (click)="activo='segundo'">Yo tengo más magia</button>
+
+  <p class="text-info my-4 d-none" [ngClass]="{'d-block':activo=='primero'}">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Illo, odio
+    similique! Consequuntur rem blanditiis similique voluptates, corporis
+    maiores doloremque cumque officiis illo quod libero illum animi tenetur
+    atque vel. Dignissimos.</p>
+
+  <p class="text-danger my-4 d-none" [ngClass]="{'d-block':activo=='segundo'}">Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Illo, odio
+    similique! Consequuntur rem blanditiis similique voluptates, corporis
+    maiores doloremque cumque officiis illo quod libero illum animi tenetur
+    atque vel. Dignissimos.</p>
+
+</div> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------- -->
+
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngFor]</h1>
+<div class="container">
+
+  <!-- <ul>
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+  </ul> -->
+
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animal of animales; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ animal.tipo }}</td>
+          <td>{{ animal.nombre }}</td>
+          <td>{{ animal.edad }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
