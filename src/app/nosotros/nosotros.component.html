@@ -3,4 +3,13 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam
     quae soluta rerum ad enim voluptas mollitia, sequi cumque praesentium aut
     sed minus ullam totam, nemo molestias eaque cum quisquam.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let miembro of equipo">
+          <h4>{{ miembro.nombre }}</h4>
+          <h6 class="text-secondary">{{ miembro.especialidad }}</h6>
+          <a href="#">Leer más...</a>
+        </li>
+    </ul>
+
 </div>
