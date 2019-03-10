@@ -1,3 +1,5 @@
+<!-- Componente que muestra una lista con todos los miembros del equipo
+  Hay un enlace que nos lleva a otro componente encargado de mostrar la información de cada miembro -->
 <div class="mt-5">
   <h2>Nosotros</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam
@@ -5,10 +7,10 @@
     sed minus ullam totam, nemo molestias eaque cum quisquam.</p>
 
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let miembro of equipo">
+        <li class="list-group-item" *ngFor="let miembro of equipo, index as i">
           <h4>{{ miembro.nombre }}</h4>
           <h6 class="text-secondary">{{ miembro.especialidad }}</h6>
-          <a href="#">Leer más...</a>
+          <a routerLink="/equipo/{{ i }}">Leer más...</a>
         </li>
     </ul>
 

@@ -15,6 +15,7 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EquipoComponent } from './equipo/equipo.component';
 
 
 // const routes: Routes = [
@@ -31,7 +32,8 @@ import { InicioComponent } from './inicio/inicio.component';
     CuerpoComponent,
     ContactoComponent,
     NosotrosComponent,
-    InicioComponent
+    InicioComponent,
+    EquipoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 
+// servicio del equipo para crear rutas dinámicas
+
 @Injectable({
   providedIn: 'root'
 })
 export class EquipoService {
 
+  // Array con la información de todos los miembros del equipo
   equipo: any[] = [
     {
       nombre: 'John Doe',
@@ -18,11 +21,18 @@ export class EquipoService {
     }
   ]
 
+  // Constructor del servicio
   constructor() {
     console.log('funcionando service');
   }
 
+  // Función para obtener un equipo entero
   obtenerEquipo() {
     return this.equipo;
+  }
+
+  // Función para obtener el miembro de un equipo
+  obtenerUno(i) {
+    return this.equipo[i];
   }
 }
